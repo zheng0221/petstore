@@ -19,11 +19,11 @@ public class UserService {
 		try {
 			dao.addUser(user);
 			// 发送激活邮件
-			/*String emailMsg = "感谢您注册网上书城，点击"
-					+ "<a href='http://localhost:8080/bookstore/activeUser?activeCode="
+			String emailMsg = "感谢您注册宠物商城，点击"
+					+ "<a href='http://119.29.18.137:9090/petstore/activeUser?activeCode="
 					+ user.getActiveCode() + "'>&nbsp;激活&nbsp;</a>后使用。"
 							+ "<br />为保障您的账户安全，请在24小时内完成激活操作";
-			MailUtils.sendMail(user.getEmail(), emailMsg);*/
+			MailUtils.sendMail(user.getEmail(), emailMsg);
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw new RegisterException("注冊失败");
@@ -60,10 +60,10 @@ public class UserService {
 			//如果找到，还需要确定用户是否为激活用户
 			if (user != null) {
 				// 只有是激活才能登录成功，否则提示“用户未激活”
-				//if (user.getState() == 1) {
+				if (user.getState() == 1) {
 					return user;
-				//}
-				//throw new LoginException("用户未激活");
+				}
+				throw new LoginException("用户未激活");
 			}
 			throw new LoginException("用户名或密码错误");
 		} catch (SQLException e) {

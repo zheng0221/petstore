@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		//获取ip地址
-		/*String ip = request.getHeader("x-forwarded-for");  
+		String ip = request.getHeader("x-forwarded-for");  
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {  
             ip = request.getHeader("Proxy-Client-IP");  
         }  
@@ -51,7 +51,7 @@ public class LoginServlet extends HttpServlet {
             }
         } 
         System.out.println(ip);
-        */
+        
 		// 1.获取登录页面输入的用户名与密码
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -69,7 +69,7 @@ public class LoginServlet extends HttpServlet {
 			//将用户uid保存在session域对象中
 			request.getSession().setAttribute("uid", uid);
 			try {
-				service2.addLogin(uid, "user");
+				service2.addLogin(uid,username, ip);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

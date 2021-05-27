@@ -30,7 +30,7 @@ public class MyAccountServlet extends HttpServlet {
 			return;
 		}
 		//如果是超级用户，进入到网上书城后台管理系统；否则进入到普通用户的账户信息页面
-		if ("超级用户".equals(user.getRole())) {
+		if ("super".equals(user.getRole())) {
 			response.sendRedirect(request.getContextPath() + "/admin/login/home.jsp");
 //			return;
 		}else{

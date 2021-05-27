@@ -55,21 +55,21 @@ body{background:#fff;color:#333;font-family:"Trebuchet MS", Verdana, Arial, Helv
 </table>
 
 <table id="chartData">
-<tr><td><a href="${pageContext.request.contextPath}/admin/pie.jsp?red=${red}&yellow=${yellow}&blue=${blue}&white=${white}">查看用户购买趋势</a></td></tr>
+<tr><td><a href="${pageContext.request.contextPath}/admin/pie.jsp?dog=${dog}&cat=${cat}&mouse=${mouse}&panda=${panda}">查看用户购买趋势</a></td></tr>
 			<tr>
 				<th>种类</th><th>购买量</th>
 			</tr>
 			<tr style="color:#ED5713">
-				<td>草本花卉</td><td>${red}</td>
+				<td>活力旺旺</td><td>${dog}</td>
 			</tr>
 			<tr style="color:#ED9C13">
-				<td>乔木花卉</td><td>${yellow}</td>
+				<td>优雅喵喵</td><td>${cat}</td>
 			</tr>
 			<tr style="color:#194E9C">
-				<td>灌木花卉</td><td>${blue}</td>
+				<td>口袋怪兽</td><td>${mouse}</td>
 			</tr>
 			<tr style="color:#0DA068">
-				<td>藤本花卉</td><td>${white}</td>
+				<td>掌上明珠</td><td>${panda}</td>
 			</tr>
 			
 			

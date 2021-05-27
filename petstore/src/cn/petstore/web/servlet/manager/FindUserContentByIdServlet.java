@@ -40,10 +40,10 @@ public class FindUserContentByIdServlet extends HttpServlet{
 			List<Order> orders = service.findOrderByUser(user);
 			double sum=0.0d;
 			String status="";
-			int red=0;
-			int yellow=0;
-			int blue=0;
-			int white=0;
+			int dog=0;
+			int cat=0;
+			int mouse=0;
+			int panda=0;
 			for(int i=0;i<orders.size();i++) {
 				sum+=orders.get(i).getMoney();
 				OrderItemDao oidao=new OrderItemDao();
@@ -54,26 +54,26 @@ public class FindUserContentByIdServlet extends HttpServlet{
 					
 					int num=orderItems.get(j).getBuynum();
 					
-					if(cate.equals("red")) {
-						red+=num;
-					}else if(cate.equals("yellow")) {
-						yellow+=num;
-					}else if(cate.equals("blue")) {
-						blue+=num;
+					if(cate.equals("dog")) {
+						dog+=num;
+					}else if(cate.equals("cat")) {
+						cat+=num;
+					}else if(cate.equals("mouse")) {
+						mouse+=num;
 					}else {
-						white+=num;
+						panda+=num;
 					}
 				}
 			}
 			String like="";
-			if(red>yellow&&red>blue&&red>white) {
-				like="草本花卉";
-			}else if(yellow>red&&yellow>blue&&yellow>white) {
-				like="乔木花卉";
-			}else if(blue>red&&blue>yellow&&blue>white) {
-				like="灌木花卉";
-			}else if(white>red&&white>blue&&white>yellow) {
-				like="藤本花卉";
+			if(dog>cat&&dog>mouse&&dog>panda) {
+				like="活力旺旺";
+			}else if(cat>dog&&cat>mouse&&cat>panda) {
+				like="优雅喵喵";
+			}else if(mouse>cat&&mouse>dog&&mouse>panda) {
+				like="口袋怪兽";
+			}else if(panda>dog&&panda>cat&&panda>mouse) {
+				like="掌上明珠";
 			}else {
 				like="用户暂无特别喜好";
 			}
@@ -85,10 +85,10 @@ public class FindUserContentByIdServlet extends HttpServlet{
 				status="正常客户";
 			}
 			request.setAttribute("sum", sum);
-			request.setAttribute("red", red);
-			request.setAttribute("yellow", yellow);
-			request.setAttribute("blue", blue);
-			request.setAttribute("white", white);
+			request.setAttribute("dog", dog);
+			request.setAttribute("cat", cat);
+			request.setAttribute("mouse", mouse);
+			request.setAttribute("panda", panda);
 			request.setAttribute("like", like);
 			request.setAttribute("status", status);
 			request.setAttribute("orders", orders);

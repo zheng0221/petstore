@@ -9,8 +9,8 @@ import cn.petstore.exception.RegisterException;
 
 public class LoginService {
 	private LoginDao dao=new LoginDao();
-	public void addLogin(int uid,String ipaddress) throws SQLException {
-		dao.add(uid,ipaddress);
+	public void addLogin(int uid,String n,String ipaddress) throws SQLException {
+		dao.add(uid,n,ipaddress);
 	}
 
 }

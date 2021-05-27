@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Language" content="zh-cn">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>网上花城</title>
+<title>宠物商城</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath }/client/css/main.css" type="text/css" />
 </head>
 <body class="main">

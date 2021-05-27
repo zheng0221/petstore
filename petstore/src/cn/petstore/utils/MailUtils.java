@@ -21,22 +21,22 @@ public class MailUtils {
 		// 设置邮件传输协议为SMTP
 		props.setProperty("mail.transport.protocol", "SMTP");
 		// 设置SMTP服务器地址
-		props.setProperty("mail.host", "smtp.sohu.com");
+		props.setProperty("mail.host", "smtp.qq.com");
 		// 设置SMTP服务器是否需要用户验证，需要验证设置为true
 		props.setProperty("mail.smtp.auth", "true");
 		// 创建验证器
 		Authenticator auth = new Authenticator() {
 			public PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("itcast_duhong", "1234567890");
+				return new PasswordAuthentication("1310782098@qq.com", "tpbwfpsgmtdshgaf");
 			}
 		};
 		Session session = Session.getInstance(props, auth);
 		// 2.创建一个Message，它相当于是邮件内容
 		Message message = new MimeMessage(session);
-		message.setFrom(new InternetAddress("itcast_duhong@sohu.com")); // 设置发送者
+		message.setFrom(new InternetAddress("1310782098@qq.com")); // 设置发送者
 		message.setRecipient(RecipientType.TO, new InternetAddress(email)); // 设置发送方式与接收者
 		message.setSubject("用户激活");
-		// message.setText("这是一封激活邮件，请<a href='#'>点击</a>");
+		//message.setText("这是一封激活邮件，请<a href='#'>点击</a>");
 		message.setContent(emailMsg, "text/html;charset=utf-8");
 		// 3.创建 Transport用于将邮件发送
 		Transport.send(message);

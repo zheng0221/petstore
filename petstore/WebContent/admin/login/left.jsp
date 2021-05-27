@@ -27,6 +27,13 @@
 			  <tr>
 			  	<td><a href="${pageContext.request.contextPath}/listUser" target="mainFrame" class="left_list">用户管理</a></td>
 			  </tr>
+			  <tr>
+			  	<td><a href="${pageContext.request.contextPath}/listLog" target="mainFrame" class="left_list">操作日志</a></td>
+			  </tr>
+			  <tr>
+			  	<td><a href="${pageContext.request.contextPath}/dengluLog" target="mainFrame" class="left_list">登录日志</a></td>
+			  </tr>
+
 			  
 		</table>
 	</body>

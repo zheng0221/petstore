@@ -32,10 +32,10 @@ body{background:#fff;color:#333;font-family:"Trebuchet MS", Verdana, Arial, Helv
 <script type="text/javascript" src="js/pieChart.js"></script>
 <div id="container">
 	<%
-	String red=request.getParameter("red"); 
-	String yellow=request.getParameter("yellow");
-	String blue=request.getParameter("blue");
-	String white=request.getParameter("white");
+	String dog=request.getParameter("dog"); 
+	String cat=request.getParameter("cat");
+	String mouse=request.getParameter("mouse");
+	String panda=request.getParameter("panda");
 	%>
 		<canvas id="chart" width="600" height="500"></canvas>
 
@@ -44,16 +44,16 @@ body{background:#fff;color:#333;font-family:"Trebuchet MS", Verdana, Arial, Helv
 				<th>种类</th><th>购买力</th>
 			</tr>
 			<tr style="color:#ED5713">
-				<td>草本花卉</td><td><%=Integer.valueOf(red) %></td>
+				<td>活力旺旺</td><td><%=Integer.valueOf(dog) %></td>
 			</tr>
 			<tr style="color:#ED9C13">
-				<td>乔木花卉</td><td><%=Integer.valueOf(yellow) %></td>
+				<td>优雅喵喵</td><td><%=Integer.valueOf(cat) %></td>
 			</tr>
 			<tr style="color:#194E9C">
-				<td>灌木花卉</td><td><%=Integer.valueOf(blue) %></td>
+				<td>口袋怪兽</td><td><%=Integer.valueOf(mouse) %></td>
 			</tr>
 			<tr style="color:#0DA068">
-				<td>藤本花卉</td><td><%=Integer.valueOf(white) %></td>
+				<td>掌上明珠</td><td><%=Integer.valueOf(panda) %></td>
 			</tr>
 			
 		</table>

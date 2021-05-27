@@ -48,6 +48,22 @@
     <servlet-name>ListUserServlet</servlet-name>
     <url-pattern>/listUser</url-pattern>
   </servlet-mapping>
+   <servlet>
+    <servlet-name>ListLogServlet</servlet-name>
+    <servlet-class>cn.petstore.web.servlet.manager.ListLogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListLogServlet</servlet-name>
+    <url-pattern>/listLog</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DengluServlet</servlet-name>
+    <servlet-class>cn.petstore.web.servlet.manager.DengluServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DengluServlet</servlet-name>
+    <url-pattern>/dengluLog</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>ShowProductByPageServlet</servlet-name>
     <servlet-class>cn.petstore.web.servlet.client.ShowProductByPageServlet</servlet-class>
